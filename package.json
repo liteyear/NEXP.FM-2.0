@@ -1,0 +1,22 @@
+{
+  "name": "nexp-fm-syndicated",
+  "version": "2.0.0",
+  "description": "NEXP.FM 2.0 - Universal CyberGnosis Radio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.19.0",
+    "@distube/soundcloud": "^2.0.4",
+    "@snazzah/davey": "^0.1.10",
+    "discord.js": "^14.25.1",
+    "distube": "^5.2.3",
+    "ffmpeg-static": "^5.2.0",
+    "sodium-native": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

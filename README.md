@@ -1,4 +1,4 @@
-#NEXP.FM 2.0
+**NEXP.FM-2.0**
 
 NEXP.FM-2.0 is a lightweight, high-performance Discord bot designed to stream public SoundCloud playlists 24/7 into a Voice Channel (VC). Built for stability and low resource overhead, it’s the perfect engine for community radio stations, lo-fi streams, or "always-on" background audio.
 

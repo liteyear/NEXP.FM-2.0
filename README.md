@@ -1,67 +1,85 @@
-**NEXP.FM-2.0**
+# 📻 NEXP.FM-2.0
 
-NEXP.FM-2.0 is a lightweight, high-performance Discord bot designed to stream public SoundCloud playlists 24/7 into a Voice Channel (VC). Built for stability and low resource overhead, it’s the perfect engine for community radio stations, lo-fi streams, or "always-on" background audio.
+> A lightweight, high-performance Discord bot designed to stream public SoundCloud playlists 24/7 into a Voice Channel (VC).
 
-🚀 Features
-24/7 Uptime: Automatically reconnects and stays in the VC.
+Built for stability and low resource overhead, **NEXP.FM-2.0** is the perfect engine for community radio stations, lo-fi streams, or "always-on" background audio.
 
-SoundCloud Integration: Streams directly from any public SoundCloud playlist URL.
+---
 
-Minimalist Design: Low CPU and RAM usage, ideal for hosting on small VPS instances.
+## 🚀 Features
 
-Auto-Resume: Smart logic to handle Discord gateway hiccups without stopping the music.
+* **24/7 Uptime:** Automatically reconnects and stays in the VC without manual intervention.
+* **SoundCloud Integration:** Streams directly from any public SoundCloud playlist URL.
+* **Minimalist Design:** Low CPU and RAM usage, ideal for hosting on small VPS instances.
+* **Auto-Resume:** Smart logic to handle Discord gateway hiccups without stopping the music.
 
-🛠 Installation
-Prerequisites
-Node.js (v18.0.0 or higher recommended)
+---
 
-FFmpeg (Essential for audio processing)
+## 🛠 Installation
 
-A Discord Bot Token (via Discord Developer Portal)
+### Prerequisites
+* **Node.js** (v18.0.0 or higher recommended)
+* **FFmpeg** (Essential for audio processing)
+* **Discord Bot Token** (via [Discord Developer Portal](https://discord.com/developers/applications))
 
-Setup
-Clone the repository:
+### Setup
 
-Bash
-git clone https://github.com/liteyear/NEXP.FM-2.0.git
-cd NEXP.FM-2.0
-Install dependencies:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/liteyear/NEXP.FM-2.0.git](https://github.com/liteyear/NEXP.FM-2.0.git)
+    cd NEXP.FM-2.0
+    ```
 
-Bash
-npm install
-Configure Environment:
-Create a .env file in the root directory and add your credentials:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Code snippet
-DISCORD_TOKEN=your_bot_token_here
-PLAYLIST_URL=https://soundcloud.com/user/sets/your-playlist
-VOICE_CHANNEL_ID=your_vc_channel_id
-GUILD_ID=your_server_id
-Run the bot:
+3.  **Configure Environment:**
+    Create a `.env` file in the root directory and add your credentials:
+    ```env
+    DISCORD_TOKEN=your_bot_token_here
+    PLAYLIST_URL=[https://soundcloud.com/user/sets/your-playlist](https://soundcloud.com/user/sets/your-playlist)
+    VOICE_CHANNEL_ID=your_vc_channel_id
+    GUILD_ID=your_server_id
+    ```
 
-Bash
-node index.js
-⚙️ Configuration
-You can customize the bot's behavior in the config.json (or your equivalent settings file):
+4.  **Run the bot:**
+    ```bash
+    node index.js
+    ```
 
-Volume: Set default gain levels to prevent clipping.
+---
 
-Auto-Join: Toggle whether the bot should force-join on startup.
+## ⚙️ Configuration
 
-Bitrate: Adjust based on your server's boost level for maximum clarity.
+You can customize the bot's behavior in the `config.json` (or your equivalent settings file):
 
-📦 Deployment
-For 24/7 operation, it is recommended to use a process manager like PM2:
+* **Volume:** Set default gain levels to prevent clipping.
+* **Auto-Join:** Toggle whether the bot should force-join on startup.
+* **Bitrate:** Adjust based on your server's boost level for maximum clarity.
 
-Bash
+---
+
+## 📦 Deployment
+
+For 24/7 operation, it is recommended to use a process manager like **PM2**:
+
+```bash
+# Install PM2 globally
 npm install pm2 -g
+
+# Start the bot
 pm2 start index.js --name "nexp-fm"
+
+# Save the process list for reboots
 pm2 save
-🤝 Contributing
+
+🤝 **Contributing**
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-📄 License
+📄 **License**
 This project is MIT licensed.
 
-Support
-If you find this tool useful, give it a ⭐️ to help others find it!
+⭐ **Support**
+If you find this tool useful, give it a star to help others find it!
